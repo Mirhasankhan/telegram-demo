@@ -21,7 +21,7 @@ const Messages = ({ message, currentMessage }: { message: TMessage[]; currentMes
             }}>
             {message?.length > 0 && <div className='fixed top-0 right-0 left-[453px] flex bg-white px-3 py-1 gap-2 justify-between items-center'>
                 <div>
-                    <h1 className='font-medium'>{currentMessage}</h1>
+                    <h1 className='font-medium'>{currentMessage || "unknown sender"}</h1>
                     <p className='text-sm text-gray-400'>Last Seen 1 hour ago</p>
                 </div>
                 <div className='flex gap-4 text-gray-400 items-center'>
@@ -31,7 +31,7 @@ const Messages = ({ message, currentMessage }: { message: TMessage[]; currentMes
                     <SlOptionsVertical></SlOptionsVertical>
                 </div>
             </div>}
-            <div>
+            <div className='py-12'>
                 {message?.map((mess: TMessage, index: number) => <div key={index}>
                     {index % 2 === 0 ? (
                         <div>
@@ -45,7 +45,7 @@ const Messages = ({ message, currentMessage }: { message: TMessage[]; currentMes
                         </div>
                     )}
                 </div>)}
-                {!message && <div className='h-screen flex flex-grow justify-center items-center'>
+                {message?.length <1 && <div className='h-screen flex flex-grow justify-center items-center'>
                     <p className='bg-black px-2 py-1 text-sm bg-opacity-30 rounded-lg text-white'>select a chat to start messaging</p>
                 </div>}
             </div>
