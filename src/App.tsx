@@ -20,6 +20,7 @@ const App = () => {
           setMessage={setMessage}
           setCurrentMessage={setCurrentMessage}
         ></Chats>
+
         <Messages message={message} currentMessage={currentMessage}></Messages>
       </div>
       <div className="hidden md:grid grid-cols-6">

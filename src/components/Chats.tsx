@@ -16,6 +16,7 @@ const Chats = ({
   const [chats, setChats] = useState<TChat[]>([]);
   const [id, setId] = useState("");
   const [selectedChatId, setSelectedChatId] = useState<string | null>(null);
+
   const colors = [
     "bg-green-400",
     "bg-red-400",
