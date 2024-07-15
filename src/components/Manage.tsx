@@ -67,6 +67,10 @@ const Manage = () => {
                         </div>
                         <Switch defaultChecked />
                     </div>
+                    <div className="mt-40 text-gray-400">
+                        <h1>Telegram Desktop</h1>
+                        <p>Version 5.2.3 x64 - About</p>
+                    </div>
                 </div>
             </Drawer>
         </div>
