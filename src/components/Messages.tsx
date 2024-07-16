@@ -57,7 +57,7 @@ const Messages = ({
             {index % 2 === 0 ? (
               <div>
                 <p
-                  className="ml-3 p-2 rounded-md w-2/5 my-2"
+                  className="ml-3 p-2 rounded-md w-2/5 my-3"
                   style={{
                     background: isDarkMode ? "black" : "white",
                     color: isDarkMode ? "white" : "black",
@@ -72,7 +72,7 @@ const Messages = ({
             ) : (
               <div>
                 <p
-                  className="ml-auto p-2 mr-3 rounded-md w-2/5 my-2"
+                  className="ml-auto p-2 mr-3 rounded-md w-2/5 my-3"
                   style={{
                     background: isDarkMode ? "purple" : "white",
                     color: isDarkMode ? "white" : "black",

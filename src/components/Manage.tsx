@@ -10,6 +10,8 @@ import { IoMdContact } from "react-icons/io";
 import { MdOutlineLocalPhone } from "react-icons/md";
 import { GrAnnounce } from "react-icons/gr";
 import { ThemeContext } from "./ThemeProvider";
+import { CiCircleQuestion } from "react-icons/ci";
+import { FaUserPlus } from "react-icons/fa";
 
 const Manage = () => {
   const [open, setOpen] = useState(false);
@@ -40,9 +42,14 @@ const Manage = () => {
         open={open}
       >
         <div className="border-b pb-2">
-          <p className="rounded-full w-12 h-12 flex items-center justify-center bg-purple-400 text-white text-xl">
-            M
-          </p>
+          <div className="flex items-center justify-between">
+            <p className="rounded-full w-12 h-12 flex items-center justify-center bg-purple-400 text-white text-xl">
+              M
+            </p>
+            <div className="md:hidden">
+              <Switch onChange={toggleTheme} />
+            </div>
+          </div>
           <div className="flex justify-between items-center">
             <div>
               <h1 className="font-medium pt-3">Mir Hasan</h1>
@@ -76,14 +83,22 @@ const Manage = () => {
             <IoSettingsOutline className="text-2xl"></IoSettingsOutline>
             <h1 className="font-medium">Settings</h1>
           </div>
-          <div className="flex gap-4 items-center justify-between py-2">
+          <div className="md:hidden border-t pt-2 flex gap-4 items-center py-2">
+            <FaUserPlus className="text-2xl"></FaUserPlus>
+            <h1 className="font-medium">Invite Friends</h1>
+          </div>
+          <div className="md:hidden flex gap-4 items-center py-2">
+            <CiCircleQuestion className="text-2xl"></CiCircleQuestion>
+            <h1 className="font-medium">Telegram Features</h1>
+          </div>
+          <div className="hidden md:flex gap-4 items-center justify-between py-2">
             <div className="flex items-center gap-4">
               <FaRegMoon className="text-2xl"></FaRegMoon>
               <h1 className="font-medium">Night Mode</h1>
             </div>
             <Switch onChange={toggleTheme} />
           </div>
-          <div className="mt-40 text-gray-400">
+          <div className="hidden md:block mt-40 text-gray-400">
             <h1>Telegram Desktop</h1>
             <p>Version 5.2.3 x64 - About</p>
           </div>
